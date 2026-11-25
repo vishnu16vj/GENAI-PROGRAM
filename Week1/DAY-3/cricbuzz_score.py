@@ -6,9 +6,9 @@ with sync_playwright() as p:
     # 1. Launch real Google Chrome in new headless mode to bypass Cricbuzz bot detection
     browser = p.chromium.launch(
         channel="chrome",
-        headless=True,
+        headless=False,
         args=[
-            "--headless=new",
+            "--headless=false",
             "--disable-blink-features=AutomationControlled"
         ]
     )
